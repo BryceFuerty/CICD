@@ -13,12 +13,6 @@ jobs:
         node-version: [14, 16]  # Exemple d'utilisation d'un matrix avec différentes versions de Node.js (modifier selon le besoin)
 
     steps:
-      # Étape 1 : Checkout du code
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Étape 2 : Installer Node.js (si tu utilises Node.js)
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
