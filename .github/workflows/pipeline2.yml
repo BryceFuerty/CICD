@@ -1,0 +1,14 @@
+name: 2nd Pipeline App
+
+on:
+  workflow_run:
+    workflows: ["Build Application"]
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout code
+          run: "echo 'deployed'"
