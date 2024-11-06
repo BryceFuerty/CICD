@@ -8,14 +8,13 @@ on:
       - completed
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-        - name : Deploying Code
-          run : Echo Application deployed  !
+      - name : Deploying Code
+        run : Echo Application deployed  !
       
       
