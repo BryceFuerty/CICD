@@ -14,6 +14,6 @@ on:
         uses: actions/checkout@v2
 
       - name : Deploying Code
-        run : Echo Application deployed !
+        run : Echo Application deployed  !
       
       
