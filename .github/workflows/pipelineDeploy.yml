@@ -1,0 +1,19 @@
+name: Deploy Application
+
+
+on:
+  workflow_run:
+    workflows: ["Test Application"]
+    types:
+      - completed
+
+ build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name : Deploying Code
+        run : Echo Application deployed !
+      
+      
