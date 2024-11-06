@@ -7,13 +7,15 @@ on:
     types:
       - completed
 
- build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+jobs:
 
-      - name : Deploying Code
-        run : Echo Application deployed  !
+  build:
+    runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+
+        - name : Deploying Code
+          run : Echo Application deployed  !
       
       
