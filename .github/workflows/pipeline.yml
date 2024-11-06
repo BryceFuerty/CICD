@@ -1,16 +1,15 @@
-name: build
+name: Build Application
 
 on:
   push:
-    branches: 
-      - main 
-
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
     steps:
-     - name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set up Node.js
@@ -21,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+#      - name: Run tests
+#        run: npm test
+
       - name: Build application
         run: npm run build
-
-
-    
